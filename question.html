@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Add new question</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+   
+  <link rel="stylesheet" href="newQuestion.css">
+  <link rel="stylesheet" href="mobileQuestion.css">
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid text-secondary">
+          <a class="navbar-brand" href="#"><strong><em>MY QUIZ</em></strong></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="about.html"
+                  >About me</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="quiz.html">Quiz</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                Additions to the quiz
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item active" href="question.html"
+                      >Add new question</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="indexCommunity.html">Community</a></li>
+                  <li>
+                    <a class="dropdown-item" href="list.html">Ranking list</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section>
+      <form class="bg-dark text-white m-3 p-2 border rounded y" id="info">
+        <div class="row w-75 p-2 m-auto">
+          <h1 class="text-center">I'm in the mood to see your question suggestions!</h1>
+          <label for="fields">Chose field:</label>
+          <select name="fields" id="fields" class="p-3 rounded" tab="0">
+            <option value="art">Art</option>
+            <option value="science">Science</option>
+            <option value="visitor">Visitor questions</option>
+          </select>
+        </div>
+        <div class="row m-auto w-75">
+          <input
+            type="text"
+            name="question"
+            id="questions"
+            placeholder="Enter the text of the question"
+            class="d-block p-2 m-2 rounded"
+            required
+            tab="1"
+            minlength="1"
+          />
+        </div>
+        <div class="row m-auto w-75">
+          <input class="text-secondary bg-light p-2 m-2 rounded"  id="inputShow" placeholder="Enter the answers">
+        
+          </input>
+        </div>
+          <div id="inputHide" class="row m-auto w-75">
+            <input
+              type="text"
+              name="answer1"
+              id="answer1"
+              placeholder="1. Enter correct or random answer"
+              class="d-block p-2 m-2 rounded"
+              tab="2"
+              required
+              minlength="1"
+            />
+            <input
+              type="text"
+              name="answer2"
+              id="answer2"
+              placeholder="2. Enter correct or random answer"
+              class="d-block p-2 m-2 rounded"
+              tab="3"
+              required
+              minlength="1"
+            />
+            <input
+              type="text"
+              name="answer3"
+              id="answer3"
+              placeholder="3. Enter correct or random answer"
+              class="d-block p-2 m-2 rounded"
+              tab="4"
+              required
+              minlength="1"
+            />
+          </div>
+        
+        <div class="row m-auto w-75">
+          <input
+            type="number"
+            name="rightAnswer"
+            id="rightAnswer"
+            placeholder="Enter the number of right answer"
+            class="d-block p-2 m-2 rounded"
+            tab="5"
+            required
+            min="1"
+            max="3"
+          />
+        </div>
+        <div class="row m-auto w-25">
+          <button type="submit" class="btn btn-secondary p-2 m-2 rounded">add</button>
+        </div>
+      </form>
+    </section>
+    <article></article>
+    <footer class="bg-dark text-white w-100 p-3 text-center fixed-bottom">
+      
+      <h4>
+        &copy;<small>2023
+          <b>Renata Tukic</b>
+          <i>Frontend Web Developer</i></small
+        >
+      </h4>
+      <a href="https://www.linkedin.com/in/renata-tukic/"
+        ><img src="/image/icon-852639_640.png" alt="in"
+      /></a>
+   
+  </footer>
+
+    
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+
+    <script>
+       // Your web app's Firebase configuration
+       const firebaseConfig = {
+            apiKey: "AIzaSyAbG0z2SNICepUkhuPJtmxFn89uE_vVlnc",
+            authDomain: "itbootcamp-d8167.firebaseapp.com",
+            projectId: "itbootcamp-d8167",
+            storageBucket: "itbootcamp-d8167.appspot.com",
+            messagingSenderId: "1033608011498",
+            appId: "1:1033608011498:web:ffead5eefd944d0d88c193"
+    };
+       // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    let db = firebase.firestore();
+    </script>
+    <script src="newQuestion.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+#zindex {
+  background-image: url("https://cdn.pixabay.com/photo/2018/05/08/11/29/dandelion-3382825_1280.jpg");
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+.starAnimation {
+  width: 150px;
+  height: 150px;
+  z-index: -10;
+  position: absolute;
+  animation: changePosition 10s;
+  bottom: -300px;
+  border-radius: 50%;
+}
+.starAnimation1 {
+  width: 200px;
+  height: 200px;
+  z-index: -10;
+  position: absolute;
+  animation: changePosition1 15s;
+  bottom: -300px;
+}
+@keyframes changePosition {
+  0% {
+    top: 0;
+    right: 0;
+  }
+
+  100% {
+    top: 100%;
+    right: 100%;
+  }
+}
+@keyframes changePosition1 {
+  0% {
+    top: 50%;
+    right: -100px;
+  }
+
+  100% {
+    top: 100%;
+    right: 100%;
+  }
+}
+.maslacakAnimacija {
+  z-index: 1;
+  position: absolute;
+  animation: maslacak 15s;
+  width: 1px;
+  height: 1px;
+}
+.maslacakAnimacija1 {
+  z-index: 1;
+  position: absolute;
+  animation: maslacak1 10s;
+  width: 1px;
+  height: 1px;
+}
+@keyframes maslacak {
+  0% {
+    width: 10px;
+    height: 10px;
+    top: 55%;
+    right: 50%;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    top: 40%;
+    right: 50%;
+    opacity: 0.5;
+  }
+}
+@keyframes maslacak1 {
+  0% {
+    width: 20px;
+    height: 20px;
+    top: 60%;
+    left: 70%;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    top: 30%;
+    left: 70%;
+    opacity: 0.7;
+  }
+}
+#infoDiv {
+  background-color: hsla(0, 0%, 99%, 0.9);
+  margin: 17% auto;
+  font-size: 50px;
+  text-align: center;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+  text-shadow: 5px 5px 5px black, 6px 6px 7px rgb(11, 106, 106);
+}
+video {
+  display: none;
+}
+#mobile {
+  display: none;
+}
+.left {
+  width: 50%;
+  float: left;
+  margin: 5% 0 5% 5%;
+}
+.right {
+  width: 35%;
+  float: right;
+  margin: 5% 0;
+  margin-right: 5%;
+}
+
+#desktop div {
+  border: 5px solid rgb(11, 106, 106);
+  font-size: 30px;
+  padding: 5%;
+  text-align: justify;
+  font-weight: 600;
+  color: white;
+  box-shadow: 5px 5px 15px 10px grey;
+  background-color: rgb(11, 106, 106);
+}
+h3 {
+  text-align: center;
+  font-size: 50px;
+}
+h4 {
+  font-size: 40px;
+}
+footer {
+  clear: both;
+  position: relative;
+  bottom: 0;
+}
+footer h3,
+h4 {
+  color: gray;
+}
+footer a img {
+  width: 50px;
+}

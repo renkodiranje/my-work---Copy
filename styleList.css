@@ -1,0 +1,85 @@
+video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+article {
+  color: white;
+  z-index: 9;
+  position: relative;
+  opacity: 0.8;
+  height: 85vh;
+  overflow: auto;
+}
+ol {
+  width: 50%;
+}
+img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+span,
+i {
+  padding: 0 10px;
+  text-transform: capitalize;
+}
+ol li:first-of-type i {
+  color: gold;
+  font-size: 54px;
+  position: relative;
+  top: 10px;
+  text-shadow: 5px 5px 20px rgb(212, 212, 186);
+}
+ol li:first-of-type {
+  color: gold;
+}
+ol li {
+  margin-left: 10%;
+  font-size: larger;
+  font-weight: 700;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 5;
+  margin-top: 10px;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+  padding-top: 10px;
+}
+footer a {
+  color: white;
+}
+
+.badge {
+  margin: 0 15px;
+  font-size: 20px;
+}
+.message {
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  z-index: 600;
+  background-image: linear-gradient(rgb(122, 125, 125), rgb(10, 10, 10));
+  padding: 20px;
+  color: rgb(52, 175, 246);
+  text-transform: none;
+  border-radius: 20px 20px 0px 20px;
+  width: 30%;
+  word-break: break-all;
+  font-size: medium;
+}

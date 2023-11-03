@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About me</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styleAbout.css" />
+    <link rel="stylesheet" href="mobileAbout.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid text-secondary">
+          <a class="navbar-brand" href="#"
+            ><strong><em>MY QUIZ</em></strong></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="about.html"
+                  >About me</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="quiz.html">Quiz</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Additions to the quiz
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="question.html"
+                      >Add new question</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="indexCommunity.html"
+                      >Community</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="list.html">Ranking list</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <article>
+      <div class="card mb-1" style="width: 100%">
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img
+              src="/image/slika.jpg"
+              class="img-thumbnail w-25 img-fluid opacity-75 m-1 p-1"
+              alt="my Photo"
+            />
+          </div>
+          <div class="col-md-8">
+            <div class="card-body m-1">
+              <h5 class="card-title">
+                Renata Tukic - Junior Frontend Web Developer
+              </h5>
+              <p class="card-text p-3">
+                Hello everyone,<br />
+                <strong>I'm looking for a job </strong>as a Frontend web
+                Developer junior. You can see additional information here.<em>
+                  Feel free to contact me</em
+                >.
+              </p>
+              <div class="card-text m-2 row">
+                <a
+                  href="/pdf/CV Renata Tukic.pdf"
+                  download
+                  class="m-1 col-sm-12 col-lg-3"
+                >
+                  <button class="btn btn-secondary">
+                    Download CV
+                    <i class="fa fa-download" aria-hidden="true"></i>
+                  </button>
+                </a>
+                <a
+                  href="https://rad-meerkat-d8e354.netlify.app/"
+                  target="_blank"
+                  class="m-1 col-sm-12 col-lg-3"
+                >
+                  <button class="btn btn-info text-white">
+                    My portfolio
+                    <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                  </button>
+                </a>
+                <a
+                  href="mailto:renata.tukic@gmail.com"
+                  class="m-1 col-sm-12 col-lg-3"
+                  ><button class="btn btn-primary">
+                    Send me email <i class="fa fa-envelope"></i></button
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button bg-secondary text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseOne"
+            aria-expanded="true"
+            aria-controls="panelsStayOpen-collapseOne"
+          >
+            IT courses<i class="fa fa-certificate m-1" aria-hidden="true"></i>
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseOne"
+          class="accordion-collapse collapse show"
+        >
+          <div class="accordion-body" id="programer">
+            <dl>
+              <dt>
+                <strong
+                  ><a href="https://www.itbootcamp.rs/" target="_blank"
+                    ><span id="bootcamp">IT</span> Bootcamp</a
+                  ></strong
+                >
+              </dt>
+              <dd>11/2022-02/2023 - Web development (JS + React)</dd>
+            </dl>
+
+            <dl>
+              <dt>Skills</dt>
+              <dd>
+                <img src="/image/html5-3384039_1280.png" alt="html" /><img
+                  src="/image/css.png"
+                  alt="css"
+                /><img src="/image/javascript-736400_640.webp" alt="js" /><img
+                  src="/image/github-6980894_1280.png"
+                  alt="gitHub"
+                />
+              </dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed bg-secondary text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseTwo"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseTwo"
+          >
+            Formal education
+            <i class="fa fa-graduation-cap m-1" aria-hidden="true"></i>
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseTwo"
+          class="accordion-collapse collapse"
+        >
+          <div class="accordion-body" id="pils">
+            <dl>
+              <dt>Faculty of Medicine, University of Nis</dt>
+              <dd>2008/2017 - MPharm</dd>
+            </dl>
+            <dl>
+              <dt>Medical school "Dr Milenko Hadzic", Nis</dt>
+              <dd>2004/2008- Pharmaceutical technician</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header">
+          <button
+            class="accordion-button collapsed bg-secondary text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#panelsStayOpen-collapseThree"
+            aria-expanded="false"
+            aria-controls="panelsStayOpen-collapseThree"
+          >
+            Work experience<i
+              class="fa fa-briefcase m-1"
+              aria-hidden="true"
+            ></i>
+          </button>
+        </h2>
+        <div
+          id="panelsStayOpen-collapseThree"
+          class="accordion-collapse collapse"
+        >
+          <div class="accordion-body" id="pharmacist">
+            <dl>
+              <dt>My previous jobs</dt>
+              <dd>"Hedera pharmacy" - pharmacist</dd>
+              <dd>"Vik Invest DOO" - cashier</dd>
+              <dd>"Goodwill" pharmacy - apprentice pharmacist</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="bg-dark text-white w-100 p-2 text-center">
+      <h4>
+        &copy;<small
+          >2023
+          <b>Renata Tukic</b>
+          <i>Frontend Web Developer</i></small
+        >
+      </h4>
+      <a href="https://www.linkedin.com/in/renata-tukic/" target="_blank"
+        ><img src="/image/icon-852639_640.png" alt="in"
+      /></a>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

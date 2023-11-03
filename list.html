@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranking list</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styleList.css" />
+    <link rel="stylesheet" href="mobileList.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid text-secondary">
+          <a class="navbar-brand" href="#"
+            ><strong><em>MY QUIZ</em></strong></a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="quiz.html"
+                  >Quiz</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Additions to the quiz
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="question.html"
+                      >Add new question</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="indexCommunity.html"
+                      >Community</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item active" href="list.html"
+                      >Ranking list</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <article></article>
+    <video autoplay muted loop id="myVideo">
+      <source src="/video/black_-_13495 (540p).mp4" type="video/mp4" />
+    </video>
+    <footer>
+      <h4>
+        &copy;<small
+          >2023
+          <b>Renata Tukic</b>
+          <i>Frontend Web Developer</i></small
+        >
+      </h4>
+      <a href="https://github.com/renkodiranje" target="_blank">GitHub</a>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAbG0z2SNICepUkhuPJtmxFn89uE_vVlnc",
+        authDomain: "itbootcamp-d8167.firebaseapp.com",
+        projectId: "itbootcamp-d8167",
+        storageBucket: "itbootcamp-d8167.appspot.com",
+        messagingSenderId: "1033608011498",
+        appId: "1:1033608011498:web:ffead5eefd944d0d88c193",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      let db = firebase.firestore();
+    </script>
+    <script src="scriptList.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

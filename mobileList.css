@@ -1,0 +1,18 @@
+@media screen and (max-width: 720px) {
+  ol {
+    width: 90%;
+  }
+  article {
+    height: 75vh;
+  }
+  footer h3 {
+    font-size: medium;
+  }
+  .message {
+    width: 50%;
+  }
+}
+footer h3,
+h4 {
+  color: gray;
+}

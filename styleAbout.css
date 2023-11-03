@@ -1,0 +1,53 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+#bootcamp {
+  background-color: orange;
+  color: white;
+  padding: 5px;
+}
+div strong a {
+  color: black;
+  text-decoration: none;
+}
+dd img {
+  width: 6%;
+  height: 6%;
+  margin: 2%;
+  box-shadow: 5px 5px 5px 5px rgb(231, 196, 132);
+}
+#pils {
+  background-image: url("../image/chemist-2026442_1280.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+#pharmacist {
+  background-image: url("../image/pharmacist-7502987_1280.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+#programer {
+  background-image: url("../image/programmer-3607627_640.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+}
+footer h3,
+h4 {
+  color: gray;
+}
+footer a img {
+  width: 40px;
+}
+.accordion {
+  position: relative;
+  z-index: 1;
+}

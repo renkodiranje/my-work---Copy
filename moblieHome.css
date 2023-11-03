@@ -1,0 +1,38 @@
+@media screen and (max-width: 720px) {
+  body {
+    height: initial;
+  }
+  #zindex {
+    background-image: none;
+    position: relative;
+    z-index: 1;
+  }
+  video {
+    display: block;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+
+    min-width: 100%;
+    min-height: 100%;
+  }
+  #infoDiv {
+    background-color: hsla(0, 6%, 3%, 0.6);
+    color: white;
+    position: relative;
+    width: 80%;
+    margin: 10% auto;
+    font-size: medium;
+    text-align: justify;
+  }
+  #mobile {
+    display: block;
+  }
+  #desktop {
+    display: none;
+  }
+  .container-fluid h1,
+  h2 {
+    color: white;
+  }
+}

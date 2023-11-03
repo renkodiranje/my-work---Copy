@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" type="text/css" href="home.css" />
+    <link rel="stylesheet" type="text/css" href="moblieHome.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Open+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700;1,800&family=Playfair+Display:wght@400;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body id="bd">
+    <div id="zindex">
+      <header>
+        <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+          <div class="container-fluid text-secondary">
+            <a class="navbar-brand" href="#"
+              ><strong><em>MY QUIZ</em></strong></a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="index.html"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About me</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="quiz.html">Quiz</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Additions to the quiz
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="question.html"
+                        >Add new question</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="indexCommunity.html"
+                        >Community</a
+                      >
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="list.html">Ranking list</a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <div class="container-fluid p-5 bg-dark text-white text-center mb-5">
+        <h1>Renata Tukic</h1>
+        <h2>Front-end web developer</h2>
+      </div>
+      <div class="container p-3 border border-1 rounded" id="infoDiv">
+        <h4 class="text-white">Hello everyone,</h4>
+        <p class="p-2">
+          I am <strong>Front-end Web Developer junior </strong>
+          <em>looking&nbsp;for</em> my first professional experience.
+        </p>
+        <div id="mobile">
+          <p class="p-2">
+            I've been learning JavaScript for a while now. I like to explore,
+            think about a problem, and find creative solutions for website
+            design and functionality. I completed an intensive
+            <strong>IT Bootcamp web development course</strong> and acquired
+            basic knowledge of
+            <em>HTML, CSS, JavaScript, and ReactJS</em> through interactive
+            lectures, homework, and independent projects. I also know Sass,
+            Bootstrap, firebase, jQuery, and git.
+          </p>
+          <p class="p-2">
+            By formal education, I have a master's degree in pharmacy. I enjoy
+            traveling, dancing and music.
+          </p>
+          <p class="p-2">
+            With <strong>this project</strong>, I combined the knowledge
+            acquired in the course and independent research. Feel free to
+            <em>play&nbsp;the&nbsp;quiz</em>, add a question of your choice, and
+            view the profiles of other participants. I hope you will have fun.
+          </p>
+        </div>
+      </div>
+    </div>
+    <video autoplay muted loop id="myVideo">
+      <source src="/video/golden_-_48569 (1080p).mp4" type="video/mp4" />
+    </video>
+    <div id="desktop">
+      <div class="left rounded">
+        <h3>About me</h3>
+        <hr />
+        <p class="p-2">
+          I've been learning JavaScript for a while now. I like to explore,
+          think about a problem, and find creative solutions for website design
+          and functionality. I completed an intensive<strong>
+            IT Bootcamp web development course </strong
+          >and acquired basic knowledge of
+          <em>HTML, CSS, JavaScript, and ReactJS</em> through interactive
+          lectures, homework, and independent projects. I also know
+          <em>Sass, Bootstrap, firebase, jQuery, and git</em>.
+        </p>
+
+        <p class="p-2">
+          By formal education, I have a master's degree in pharmacy. I enjoy
+          traveling, dancing and music.
+        </p>
+        <p class="p-2"></p>
+      </div>
+
+      <div class="right rounded">
+        <h3>About project</h3>
+        <hr />
+        <p class="p-2">
+          With <strong>this project</strong> , I combined the knowledge acquired
+          in the course and independent research. Feel free to
+          <em>play&nbsp;the&nbsp;quiz</em>, add a question of your choice, and
+          view the profiles of other participants. I hope you will have fun.
+        </p>
+      </div>
+
+      <footer class="bg-dark text-white w-100 p-3 text-center">
+        <h4>
+          &copy;<small>
+            2023
+            <b>Renata Tukic</b>
+            <i>Frontend Web Developer</i></small
+          >
+        </h4>
+        <a href="https://www.linkedin.com/in/renata-tukic/"
+          ><img src="/image/icon-852639_640.png" alt="in"
+        /></a>
+      </footer>
+    </div>
+    <script src="scriptHome.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

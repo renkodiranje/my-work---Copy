@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quiz</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="quiz.css" />
+    <link rel="stylesheet" href="mobileQuiz.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid text-secondary">
+          <a class="navbar-brand" href="#">MY QUIZ</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About me</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="quiz.html"
+                  >Quiz</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Additions to the quiz
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="question.html"
+                      >Add new question</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="indexCommunity.html"
+                      >Community</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="list.html">Ranking list</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="wholePage">
+      <div id="carouselInner" class="m-3"></div>
+
+      <div id="divBtnContainer">
+        <button
+          class="text-white text-uppercase text-center border rounded"
+          id="signIn"
+        >
+          Sign In
+        </button>
+        <button
+          class="text-white text-uppercase text-center border rounded"
+          id="signUp"
+        >
+          Sign up
+        </button>
+      </div>
+      <section id="user">
+        <button class="btn btn-secondary m-auto m-2">Start Quiz</button>
+
+        <form id="logIn" class="m-auto border rounded text-white p-2">
+          <h1 class="text-white p-5 text-uppercase text-center">Log In</h1>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon2">User</span>
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="basic-addon2"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon2">Password</span>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="Enter a password"
+              title="mast be between 5 and 10 characters long"
+              aria-label="password"
+              aria-describedby="basic-addon2"
+              minlength="5"
+              maxlength="10"
+            />
+          </div>
+          <input
+            type="submit"
+            class="btn btn-secondary mt-2 w-50 m-auto d-block"
+          />
+        </form>
+        <form id="userForm" class="m-auto border rounded text-white p-2">
+          <h1 class="text-white p-5 text-uppercase text-center">
+            Create your account and take the quiz
+          </h1>
+          <div
+            class="toast align-items-center"
+            role="alert"
+            aria-live="assertive"
+            aria-atomic="true"
+          >
+            <div class="d-flex">
+              <div class="toast-body">
+                <!--proveriti ovo-->
+                Hello, world! This is a toast message.
+              </div>
+              <button
+                type="button"
+                class="btn-close me-2 m-auto"
+                data-bs-dismiss="toast"
+                aria-label="Close"
+              ></button>
+            </div>
+          </div>
+
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Username</span>
+            <input
+              type="text"
+              name="username"
+              class="form-control"
+              placeholder="Username"
+              aria-label="Username"
+              aria-describedby="basic-addon1"
+              id="username"
+              required
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon2">Password</span>
+            <input
+              type="password"
+              name="password"
+              class="form-control"
+              placeholder="Enter a password"
+              title="mast be between 5 and 10 characters long"
+              aria-label="password"
+              aria-describedby="basic-addon2"
+              minlength="5"
+              maxlength="10"
+              required
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon3"
+              >Date of birth</span
+            >
+            <input
+              type="datetime-local"
+              name="dateBirth"
+              class="form-control"
+              placeholder="Date of birth"
+              aria-label="Datebirth"
+              aria-describedby="basic-addon3"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon4">Add avatar</span>
+            <input
+              type="text"
+              name="image"
+              class="form-control"
+              placeholder="Chose avatar"
+              aria-label="image"
+              aria-describedby="basic-addon4"
+              id="image"
+              data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop"
+              required
+            />
+          </div>
+
+          <div class="input-group">
+            <span class="input-group-text">Share a thought</span>
+            <textarea
+              class="form-control"
+              name="thought"
+              aria-label="thought"
+            ></textarea>
+          </div>
+          <input type="submit" class="btn btn-secondary mt-2 m-auto d-block" />
+        </form>
+      </section>
+      <section id="displayMenu">
+        <article id="questionList">
+          <h1 class="text-center text-light">Chose field</h1>
+        </article>
+        <article id="quizQuestions"></article>
+      </section>
+
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Choose Avatar
+              </h1>
+
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body" id="addedImages"></div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="buttonAddAvatar"
+                data-bs-dismiss="modal"
+              >
+                Ok
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <article id="results" class="border border-2 rounded w-75">
+      <h3>
+        Hello, <span id="name"></span> You have won
+        <strong><span id="points"></span> points</strong>!
+      </h3>
+      <div class="row">
+        <a
+          href="quiz.html"
+          class="btn btn-dark border border-2 border-light p-3 mb-5 text-light col-md-3 col-sm-6"
+          >Take the quiz</a
+        ><a
+          href="indexCommunity.html"
+          class="btn btn-dark border border-2 border-light p-3 mb-5 text-light col-md-3 offset-1 col-sm-6"
+          >Go to the community</a
+        ><a
+          href="list.html"
+          class="btn btn-dark border border-2 border-light p-3 mb-5 text-light col-md-3 offset-1 col-sm-6"
+          >See ranking list</a
+        >
+      </div>
+    </article>
+    <video autoplay muted id="myVideo">
+      <source src="/video/confetti_-_121983 (540p).mp4" type="video/mp4" />
+    </video>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <script>
+      // Your web app's Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyAbG0z2SNICepUkhuPJtmxFn89uE_vVlnc",
+        authDomain: "itbootcamp-d8167.firebaseapp.com",
+        projectId: "itbootcamp-d8167",
+        storageBucket: "itbootcamp-d8167.appspot.com",
+        messagingSenderId: "1033608011498",
+        appId: "1:1033608011498:web:ffead5eefd944d0d88c193",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      let db = firebase.firestore();
+    </script>
+    <script src="scriptquiz.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

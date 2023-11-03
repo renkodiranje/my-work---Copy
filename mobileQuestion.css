@@ -1,0 +1,16 @@
+@media screen and (max-width: 576px) {
+  body {
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/04/23/41/dandelion-923221_1280.jpg");
+  }
+  footer h3,
+  h4 {
+    font-size: 16px;
+  }
+  footer a img {
+    width: 20px;
+  }
+  form h1 {
+    font-size: 20px;
+    padding-bottom: 5px;
+  }
+}
