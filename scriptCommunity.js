@@ -19,7 +19,7 @@ function displayUl() {
       ul.innerHTML = "";
       closex.setAttribute("class", "fa fa-times-circle m-1");
       ul.append(closex);
-      // ul.style.display = "block";
+      ul.style.display = "block";
       let searchValue = search.value.toLowerCase();
 
       ul.setAttribute("id", "ulSearch");
