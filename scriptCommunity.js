@@ -190,7 +190,7 @@ function displayCurrentUserProfile() {
         let bDAY = new Date(birthday);
         let join = user.timestamp.toDate();
         let joined = join.toLocaleDateString();
-        delBtn.style.position = "fixed";
+        delBtn.style.position = "relative";
         delBtn.style.bottom = 0;
 
         delBtn.textContent = "Delete acount";
