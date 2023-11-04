@@ -193,7 +193,7 @@ function displayCurrentUserProfile() {
         delBtn.style.position = "relative";
         delBtn.style.bottom = 0;
         delBtn.style.width = "50%";
-        delBtn.style.margin = "auto";
+        delBtn.style.margin = "0 25%";
         delBtn.textContent = "Delete acount";
         let sectionContent = `<div class="card" id="card">
       <div class="row g-0">
