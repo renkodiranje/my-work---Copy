@@ -39,7 +39,7 @@ function displayUl() {
             console.log(li);
             ul.append(li);
             li.id = doc.id;
-            li.innerHTML = `<i class="fa fa-search p-2"></i>${user.username}<img src="/image/${user.image}" alt="" style="width:40px;height:40px;border-radius:50%" >`;
+            li.innerHTML = `<i class="fa fa-search p-2"></i>${user.username}<img src="${user.image}" alt="" style="width:40px;height:40px;border-radius:50%" >`;
           }
           header.append(ul);
         });
@@ -78,7 +78,7 @@ function displayCarousel() {
         let carouselItem = `
     <img
       style=" border-radius: 50%;"
-      src="/image/${user.image}"
+      src="${user.image}"
       class="d-block m-auto border border-5 border-info"
       alt="image${user.username}"
     />
@@ -138,7 +138,7 @@ function choseDisplayProfile() {
             let sectionContent = `<div class="card">
             <div class="row g-0">
               <div class="col-md-4 col-12 card-header">
-                <img src="/image/${
+                <img src="${
                   user.image
                 }" class="img-fluid rounded-start" alt="...">
               </div>
@@ -188,9 +188,7 @@ function displayCurrentUserProfile() {
       let sectionContent = `<div class="card">
       <div class="row g-0">
         <div class="col-md-4 col-12 card-header">
-          <img src="/image/${
-            user.image
-          }" class="img-fluid rounded-start" alt="...">
+          <img src="${user.image}" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-8 col-12 card-body p-4">
             <h5 class="card-title">${user.username}</h5>

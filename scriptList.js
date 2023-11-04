@@ -50,7 +50,7 @@ db.collection("user")
       spanUser.textContent = user.username;
       let img = document.createElement("img");
       img.style.background = "white";
-      img.src = `/image/${user.image}`;
+      img.src = `${user.image}`;
       img.alt = `${user.username}`;
       li.append(spanUser, img, spanScor);
       ol.append(li);
