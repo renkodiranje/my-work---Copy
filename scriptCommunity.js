@@ -170,9 +170,48 @@ delBtn.addEventListener("click", function () {
   db.doc(`user/${userLocalStorage}`).delete().then().catch();
   section.innerHTML = `<h1 class="text-warning text-center">Account is deleted!</h1>`;
   localStorage.setItem("user", "1");
-  displayCarousel();
-  let item = document.getElementsByClassName(".carousel-item");
-  item.style.display = "block";
+  db.collection("user")
+    .orderBy("timestamp", "desc")
+    .get()
+    .then((snapshot) => {
+      let changes = snapshot.docChanges();
+
+      changes.forEach((change) => {
+        let doc = change.doc;
+        let user = doc.data();
+        const divInner = document.createElement("div");
+        divInner.setAttribute("class", "carousel-item p-2");
+
+        if (doc.id == userLocalStorage) {
+          divInner.setAttribute(
+            "class",
+            "carousel-item active border border-5 border-info rounded p-2"
+          );
+        }
+        let carouselItem = `
+  <img
+    style=" border-radius: 50%;"
+    src="${user.image}"
+    class="d-block m-auto border border-5 border-info"
+    alt="image${user.username}"
+  />
+`;
+        let name = `
+    <span class="badge rounded-pill bg-info m-auto d-block position-relative" style="width:100px;">${
+      user.username
+    }
+    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+${user.scor || 0}
+    
+  </span>
+    </span>
+    `;
+
+        divInner.innerHTML = carouselItem + name;
+        carouselInner.append(divInner);
+      });
+    })
+    .catch();
 });
 function displayCurrentUserProfile() {
   console.log(userLocalStorage);
