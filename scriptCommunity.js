@@ -194,7 +194,7 @@ function displayCurrentUserProfile() {
         delBtn.style.bottom = 0;
 
         delBtn.textContent = "Delete acount";
-        let sectionContent = `<div class="card">
+        let sectionContent = `<div class="card" id="card">
       <div class="row g-0">
         <div class="col-md-4 col-12 card-header">
           <img src="${user.image}" class="img-fluid rounded-start" alt="...">
@@ -217,10 +217,11 @@ function displayCurrentUserProfile() {
     </div>`;
 
         div.innerHTML = sectionContent;
-        let card = document.getElementsByClassName("card");
-        card.append(delBtn);
+
         // div.append(delBtn);
         section.append(div);
+        let card = document.getElementById("card");
+        card.append(delBtn);
       })
       .catch();
   }
