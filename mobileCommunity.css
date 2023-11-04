@@ -66,4 +66,7 @@
     width: 40%;
     padding: 0;
   }
+  .card button {
+    font-size: 12px;
+  }
 }
