@@ -189,9 +189,9 @@ function displayCurrentUserProfile() {
         let bDAY = new Date(birthday);
         let join = user.timestamp.toDate();
         let joined = join.toLocaleDateString();
-        // delBtn.style.position = "fixed";
-        // delBtn.style.bottom = 0;
-        // section.style.position = "relative";
+        delBtn.style.position = "fixed";
+        delBtn.style.bottom = 0;
+        section.style.position = "relative";
         delBtn.textContent = "Delete acount";
         let sectionContent = `<div class="card">
       <div class="row g-0">
