@@ -14,37 +14,40 @@ delBtn.setAttribute(
 );
 
 function displayUl() {
-  search.addEventListener("keyup", function () {
-    ul.innerHTML = "";
-    closex.setAttribute("class", "fa fa-times-circle m-1");
-    ul.append(closex);
-    // ul.style.display = "block";
-    let searchValue = search.value.toLowerCase();
+  document.addEventListener("keyup", function (event) {
+    if (event.target.id === "search") {
+      ul.innerHTML = "";
+      closex.setAttribute("class", "fa fa-times-circle m-1");
+      ul.append(closex);
+      // ul.style.display = "block";
+      let searchValue = search.value.toLowerCase();
 
-    ul.setAttribute("id", "ulSearch");
-    db.collection("user")
-      .orderBy("timestamp", "desc")
-      .get()
-      .then((snapshot) => {
-        let changes = snapshot.docChanges();
+      ul.setAttribute("id", "ulSearch");
+      db.collection("user")
+        .orderBy("timestamp", "desc")
+        .get()
+        .then((snapshot) => {
+          let changes = snapshot.docChanges();
 
-        changes.forEach((change) => {
-          let doc = change.doc;
-          let user = doc.data();
-          userSearc = user.username.toLowerCase();
+          changes.forEach((change) => {
+            let doc = change.doc;
+            let user = doc.data();
+            userSearc = user.username.toLowerCase();
 
-          if (userSearc.startsWith(searchValue)) {
-            let li = document.createElement("li");
+            if (userSearc.startsWith(searchValue)) {
+              let li = document.createElement("li");
 
-            ul.append(li);
-            li.id = doc.id;
-            li.innerHTML = `<i class="fa fa-search p-2"></i>${user.username}<img src="${user.image}" alt="" style="width:40px;height:40px;border-radius:50%" >`;
-          }
-          header.append(ul);
-        });
-      })
-      .catch();
+              ul.append(li);
+              li.id = doc.id;
+              li.innerHTML = `<i class="fa fa-search p-2"></i>${user.username}<img src="${user.image}" alt="" style="width:40px;height:40px;border-radius:50%" >`;
+            }
+            header.append(ul);
+          });
+        })
+        .catch();
+    }
   });
+  search.addEventListener("keyup", function () {});
 }
 displayUl();
 function closeUl() {
