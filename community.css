@@ -103,6 +103,7 @@ video {
 }
 #profile {
   opacity: 0.9;
+  height: 50vh;
 }
 #carouselExample img {
   width: 200px;
