@@ -92,8 +92,8 @@ userInfo.addEventListener("submit", function (e) {
   let username = this.username.value;
   let dateB = this.dateBirth.value;
   let dateBirth = Date.parse(dateB);
-  let img = this.image.value;
-  console.log(img);
+  let image = this.image.value;
+
   // let image = img.slice(28);
   let date = new Date();
   let timestamp = firebase.firestore.Timestamp.fromDate(date);
@@ -104,7 +104,7 @@ userInfo.addEventListener("submit", function (e) {
   let obj = {
     username: username,
     dateBirth: dateBirth,
-    img: img,
+    image: image,
     thought: thought,
     timestamp: timestamp,
     password: password,
@@ -149,7 +149,7 @@ userInfo.addEventListener("submit", function (e) {
           nameU.textContent = user.username;
           localStorage.setItem("user", current);
           const divInner = document.createElement("div");
-          let imgLoc = user.image.shift(16);
+          let imgLoc = user.image;
           console.log(imgLoc);
           let carouselItem = `
             <img
