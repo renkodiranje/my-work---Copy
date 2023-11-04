@@ -34,9 +34,8 @@ function displayUl() {
           userSearc = user.username.toLowerCase();
 
           if (userSearc.startsWith(searchValue)) {
-            console.log(5);
             let li = document.createElement("li");
-            console.log(li);
+
             ul.append(li);
             li.id = doc.id;
             li.innerHTML = `<i class="fa fa-search p-2"></i>${user.username}<img src="${user.image}" alt="" style="width:40px;height:40px;border-radius:50%" >`;
@@ -73,7 +72,6 @@ function displayCarousel() {
             "class",
             "carousel-item active border border-5 border-info rounded p-2"
           );
-          console.log("da");
         }
         let carouselItem = `
     <img
@@ -171,9 +169,13 @@ choseDisplayProfile();
 delBtn.addEventListener("click", function () {
   db.doc(`user/${userLocalStorage}`).delete().then().catch();
   section.innerHTML = `<h1 class="text-warning text-center">Account is deleted!</h1>`;
-  localStorage.setItem("user", "");
+  localStorage.setItem("user", "1");
 });
 function displayCurrentUserProfile() {
+  console.log(userLocalStorage);
+  if (userLocalStorage == 1) {
+    section.innerHTML = "<h2>Hello World</h2>";
+  }
   db.doc(`user/${userLocalStorage}`)
     .get()
     .then((doc) => {

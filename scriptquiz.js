@@ -93,8 +93,6 @@ userInfo.addEventListener("submit", function (e) {
   let dateB = this.dateBirth.value;
   let dateBirth = Date.parse(dateB);
   let image = this.image.value;
-
-  // let image = img.slice(28);
   let date = new Date();
   let timestamp = firebase.firestore.Timestamp.fromDate(date);
   let thought = this.thought.value;
