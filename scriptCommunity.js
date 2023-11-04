@@ -170,6 +170,7 @@ delBtn.addEventListener("click", function () {
   db.doc(`user/${userLocalStorage}`).delete().then().catch();
   section.innerHTML = `<h1 class="text-warning text-center">Account is deleted!</h1>`;
   localStorage.setItem("user", "1");
+  displayCarousel();
 });
 function displayCurrentUserProfile() {
   console.log(userLocalStorage);
