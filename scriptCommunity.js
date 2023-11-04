@@ -215,8 +215,8 @@ function displayCurrentUserProfile() {
       </div>
     </div>`;
 
-        div.innerHTML = sectionContent + delBtn;
-        // div.append(delBtn);
+        div.innerHTML = sectionContent;
+        div.append(delBtn);
         section.append(div);
       })
       .catch();
