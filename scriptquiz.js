@@ -148,7 +148,8 @@ userInfo.addEventListener("submit", function (e) {
           nameU.textContent = user.username;
           localStorage.setItem("user", current);
           const divInner = document.createElement("div");
-
+          let imgLoc = user.image;
+          console.log(imgLoc);
           let carouselItem = `
             <img
               style="width: 200px; height: 200px; border-radius: 50%; background-color: blue"
