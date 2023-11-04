@@ -172,9 +172,7 @@ delBtn.addEventListener("click", function () {
   localStorage.setItem("user", "1");
   displayCarousel();
   let item = document.querySelectorAll(".carousel-item");
-  item.forEach((el) => {
-    el.style.display = "block";
-  });
+  item.style.display = "block";
 });
 function displayCurrentUserProfile() {
   console.log(userLocalStorage);
