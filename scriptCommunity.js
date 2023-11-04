@@ -171,6 +171,7 @@ delBtn.addEventListener("click", function () {
   section.innerHTML = `<h1 class="text-warning text-center">Account is deleted!</h1>`;
   localStorage.setItem("user", "1");
   displayCarousel();
+  divInner.style.display = "block";
 });
 function displayCurrentUserProfile() {
   console.log(userLocalStorage);
