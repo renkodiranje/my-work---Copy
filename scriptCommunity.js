@@ -175,19 +175,19 @@ function displayCurrentUserProfile() {
   console.log(userLocalStorage);
   if (userLocalStorage == 1) {
     section.innerHTML = "<h2>Hello World</h2>";
-  }
-  db.doc(`user/${userLocalStorage}`)
-    .get()
-    .then((doc) => {
-      let user = doc.data();
-      let div = document.createElement("div");
-      let birthday = user.dateBirth;
-      let bDAY = new Date(birthday);
-      let join = user.timestamp.toDate();
-      let joined = join.toLocaleDateString();
+  } else {
+    db.doc(`user/${userLocalStorage}`)
+      .get()
+      .then((doc) => {
+        let user = doc.data();
+        let div = document.createElement("div");
+        let birthday = user.dateBirth;
+        let bDAY = new Date(birthday);
+        let join = user.timestamp.toDate();
+        let joined = join.toLocaleDateString();
 
-      delBtn.textContent = "Delete acount";
-      let sectionContent = `<div class="card">
+        delBtn.textContent = "Delete acount";
+        let sectionContent = `<div class="card">
       <div class="row g-0">
         <div class="col-md-4 col-12 card-header">
           <img src="${user.image}" class="img-fluid rounded-start" alt="...">
@@ -209,11 +209,12 @@ function displayCurrentUserProfile() {
       </div>
     </div>`;
 
-      div.innerHTML = sectionContent;
-      div.append(delBtn);
-      section.append(div);
-    })
-    .catch();
+        div.innerHTML = sectionContent;
+        div.append(delBtn);
+        section.append(div);
+      })
+      .catch();
+  }
 }
 
 displayCurrentUserProfile();
