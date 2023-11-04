@@ -217,7 +217,9 @@ function displayCurrentUserProfile() {
     </div>`;
 
         div.innerHTML = sectionContent;
-        div.append(delBtn);
+        let card = document.getElementsByClassName("card");
+        card.append(delBtn);
+        // div.append(delBtn);
         section.append(div);
       })
       .catch();
