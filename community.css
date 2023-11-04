@@ -107,6 +107,9 @@ video {
   width: 200px;
   height: 200px;
 }
+.card {
+  overflow: auto;
+}
 .card-title {
   text-align: center;
   font-size: 50px;
