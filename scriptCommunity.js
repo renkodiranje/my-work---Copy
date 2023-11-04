@@ -195,9 +195,9 @@ function displayCurrentUserProfile() {
         delBtn.style.width = "25%";
 
         delBtn.textContent = "Delete acount";
-        let sectionContent = `<div class="card" id="card">
+        let sectionContent = `<div class="card">
       <div class="row g-0">
-        <div class="col-md-4 col-12 card-header">
+        <div class="col-md-4 col-12 card-header" id="card">
           <img src="${user.image}" class="img-fluid rounded-start" alt="...">
         </div>
         <div class="col-md-8 col-12 card-body p-4">
