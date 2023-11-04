@@ -68,5 +68,6 @@
   }
   .card button {
     font-size: 12px;
+    clear: both;
   }
 }
