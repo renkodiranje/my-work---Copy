@@ -36,7 +36,7 @@ var userLocalStorage = localStorage.getItem("user") || null;
 
 //var
 var counterSession = 0;
-var endTime = 60;
+var endTime = 180;
 
 //choose sign up or sign in start
 function displaySignUpOrIn() {
@@ -269,7 +269,7 @@ let createQuiz = (btnName, collectionName, filedName) => {
     db.collection(collectionName)
       .where("fields", "==", filedName)
       .orderBy("random")
-      .limit(5)
+      .limit(3)
       .get()
       .then((snapshot) => {
         let changes = snapshot.docChanges();
@@ -385,6 +385,12 @@ inputAvatar.addEventListener("click", function () {
     "/image/meteor-147891_1280.png",
     "/image/pokemon.webp",
     "/image/poppy.jpg",
+    "/image/ballerina-1298158_1280.webp",
+    "image/children-4967808_1280.jpg",
+    "image/fox-3166166_1280.webp",
+    "image/smurf-5009586_1280.png",
+    "image/unicorn-3637428_1280.webp",
+    "image/witch-1456313_1280.webp",
   ];
   let radio = document.createElement("div");
   radio.setAttribute("class", "d-inline");
