@@ -104,6 +104,7 @@ function displayCarousel() {
 displayCarousel();
 
 function choseDisplayProfile() {
+  displayUl();
   var Id;
   ul.addEventListener("click", function (e) {
     ul.innerHTML = "";
