@@ -191,7 +191,7 @@ function displayCurrentUserProfile() {
         let join = user.timestamp.toDate();
         let joined = join.toLocaleDateString();
 
-        delBtn.style.width = "50%";
+        delBtn.style.width = "25%";
 
         delBtn.textContent = "Delete acount";
         let sectionContent = `<div class="card">
