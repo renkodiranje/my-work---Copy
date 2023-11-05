@@ -1,7 +1,8 @@
 @media screen and (max-width: 720px) {
   aside {
-    height: 16vh;
-    opacity: 0.9;
+    position: fixed;
+    bottom: 2px;
+    height: 14vh;
   }
 
   aside img {
