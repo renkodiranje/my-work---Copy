@@ -178,6 +178,7 @@ delBtn.addEventListener("click", function () {
 function displayCurrentUserProfile() {
   console.log(userLocalStorage);
   if (userLocalStorage) {
+    console.log("iylogovan");
     db.doc(`user/${userLocalStorage}`)
       .get()
       .then((doc) => {
