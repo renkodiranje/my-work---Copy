@@ -172,14 +172,12 @@ choseDisplayProfile();
 delBtn.addEventListener("click", function () {
   db.doc(`user/${userLocalStorage}`).delete().then().catch();
   section.innerHTML = `<h1 class="text-warning text-center">Account is deleted!</h1>`;
-  localStorage.setItem("user", "1");
+  localStorage.setItem("user", "");
   displayCarousel();
 });
 function displayCurrentUserProfile() {
   console.log(userLocalStorage);
-  if (userLocalStorage == 1) {
-    section.innerHTML = "<h2>Hello World</h2>";
-  } else {
+  if (userLocalStorage) {
     db.doc(`user/${userLocalStorage}`)
       .get()
       .then((doc) => {
