@@ -2,21 +2,19 @@
   aside {
     /* position: relative;
     bottom: 20%; */
-    height: 10vh;
+    height: 12vh;
   }
 
   aside img {
-    left: 0;
     width: 60px;
     height: 60px;
   }
   aside a {
-    right: 0;
     padding: 0;
   }
   aside span {
     margin: 0;
-    padding: 0;
+    padding: 3px;
   }
   footer {
     padding: 5px;
