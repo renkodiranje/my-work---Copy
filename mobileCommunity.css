@@ -7,6 +7,7 @@
     right: 0; */
     height: initial;
     /* height: 25%; */
+    position: static;
   }
 
   aside img {
