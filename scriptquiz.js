@@ -376,7 +376,6 @@ createQuiz(btnVisitor, "quiz", "visitor");
 inputAvatar.addEventListener("click", function () {
   modalAvatar.style.display = "none";
   let images = [
-    "/image/star.webp",
     "/image/cat.webp",
     "/image/dandelion-1363238_1280.jpg",
     "/image/goku.jpg",
@@ -384,8 +383,6 @@ inputAvatar.addEventListener("click", function () {
     "/image/man-303792_1280.webp",
     "/image/meteor-147891_1280.png",
     "/image/pokemon.webp",
-    "/image/poppy.jpg",
-    "/image/ballerina-1298158_1280.webp",
     "image/children-4967808_1280.jpg",
     "image/fox-3166166_1280.webp",
     "image/smurf-5009586_1280.png",
