@@ -1,6 +1,6 @@
 @media screen and (max-width: 720px) {
   aside {
-    height: 18vh;
+    height: 16vh;
     opacity: 0.9;
   }
 
@@ -15,7 +15,7 @@
   }
   aside span {
     position: relative;
-    margin-top: 15px;
+    margin-top: 25px;
     padding: 3px;
   }
   footer {
