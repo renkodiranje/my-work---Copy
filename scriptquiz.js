@@ -388,6 +388,14 @@ inputAvatar.addEventListener("click", function () {
     "image/smurf-5009586_1280.png",
     "image/unicorn-3637428_1280.webp",
     "image/witch-1456313_1280.webp",
+    "image/dog-4627679_1280.webp",
+    "image/girl-6356393_1280.webp",
+    "image/man-3262834_1280.webp",
+    "image/man-5190962_1280.jpg",
+    "image/man-7833617_1280.webp",
+    "image/woman-163581_1280.webp",
+    "image/woman-6159648_1280.webp",
+    "image/woman-8326207_1280.webp",
   ];
   let radio = document.createElement("div");
   radio.setAttribute("class", "d-inline");

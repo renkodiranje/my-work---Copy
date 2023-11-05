@@ -56,8 +56,9 @@ function closeUl() {
   });
 }
 closeUl();
-function displayCarousel() {
-  db.collection("user")
+
+function displayCarousel(x) {
+  db.collection(x)
     .orderBy("timestamp", "desc")
     .get()
     .then((snapshot) => {
@@ -100,7 +101,7 @@ function displayCarousel() {
     })
     .catch();
 }
-displayCarousel();
+displayCarousel("user");
 
 function choseDisplayProfile() {
   displayUl();
@@ -112,7 +113,7 @@ function choseDisplayProfile() {
 
     if (e.target.closest("li")) {
       Id = e.target.id;
-      console.log(Id);
+
       ul.style.display = "none";
       search.value = "";
     }
@@ -138,7 +139,7 @@ function choseDisplayProfile() {
           if (doc.id == Id) {
             let sectionContent = `<div class="card">
             <div class="row g-0">
-              <div class="col-md-4 col-12 card-header">
+              <div class="col-md-4 col-12 card-header" id="imghead">
                 <img src="${
                   user.image
                 }" class="img-fluid rounded-start" alt="...">
@@ -161,6 +162,10 @@ function choseDisplayProfile() {
           </div>`;
             div.innerHTML = sectionContent;
             section.append(div);
+            if (userLocalStorage == doc.id) {
+              let head = document.getElementById("imghead");
+              head.append(delBtn);
+            }
           }
         });
       })
@@ -172,13 +177,13 @@ choseDisplayProfile();
 delBtn.addEventListener("click", function () {
   db.doc(`user/${userLocalStorage}`).delete().then().catch();
   section.innerHTML = `<h1 class="text-warning text-center">Account is deleted!</h1>`;
+
   localStorage.setItem("user", "");
-  displayCarousel();
 });
+
 function displayCurrentUserProfile() {
   console.log(userLocalStorage);
   if (userLocalStorage) {
-    console.log("iylogovan");
     db.doc(`user/${userLocalStorage}`)
       .get()
       .then((doc) => {
@@ -217,13 +222,55 @@ function displayCurrentUserProfile() {
 
         div.innerHTML = sectionContent;
 
-        // div.append(delBtn);
         section.append(div);
         let card = document.getElementById("card");
         card.append(delBtn);
       })
       .catch();
+  } else if (userLocalStorage == "null") {
+    db.doc("user")
+      .limit(1)
+      .get()
+      .then((doc) => {
+        let user = doc.data();
+        let div = document.createElement("div");
+        div.setAttribute("class", "position:relative");
+        let birthday = user.dateBirth;
+        let bDAY = new Date(birthday);
+        let join = user.timestamp.toDate();
+        let joined = join.toLocaleDateString();
+
+        delBtn.style.width = "25%";
+
+        delBtn.textContent = "Delete acount";
+        let sectionContent = `<div class="card">
+    <div class="row g-0">
+      <div class="col-md-4 col-12 card-header">
+        <img src="${user.image}" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8 col-12 card-body p-4">
+          <h5 class="card-title">${user.username}</h5>
+          <blockquote>${user.thought}</blockquote>
+          <cite> - ${user.username}</cite>
+          <hr>
+          <time>Date of Birth: ${bDAY.toLocaleDateString()}</time>
+          <time>Joined: ${joined}</time>
+          <hr>
+          <p class="card-text bg-info rounded text-danger text-center p-2 m-2" id="scor"><strong>Scor: ${
+            user.scor
+          }</strong><i class="fa fa-thumbs-up" aria-hidden="true"></i>
+          </p>
+       
+      </div>
+    </div>
+  </div>`;
+
+        div.innerHTML = sectionContent;
+        section.append(div);
+      })
+      .catch();
   }
 }
-
 displayCurrentUserProfile();
+
+function adLike() {}
