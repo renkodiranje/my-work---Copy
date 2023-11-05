@@ -6,12 +6,12 @@
   }
 
   aside img {
-    float: left;
+    left: 5%;
     width: 60px;
     height: 60px;
   }
   aside a {
-    float: right;
+    right: 5%;
     padding: 0;
   }
   aside span {
