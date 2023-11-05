@@ -6,6 +6,8 @@
   }
 
   aside img {
+    position: relative;
+    left: 2px;
     width: 60px;
     height: 60px;
   }
