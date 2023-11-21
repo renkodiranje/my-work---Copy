@@ -1,5 +1,4 @@
 body {
-  height: 100vh;
   /* //background-image: url("https://cdn.pixabay.com/photo/2015/09/04/23/41/dandelion-923221_1280.jpg"); */
   background-image: url("https://cdn.pixabay.com/photo/2021/05/19/14/31/dandelion-6266231_1280.jpg");
   background-repeat: no-repeat;
@@ -9,6 +8,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 1;
+  height: 10vh;
 }
 footer a img {
   width: 50px;
@@ -16,4 +16,13 @@ footer a img {
 footer h3,
 h4 {
   color: gray;
+}
+footer {
+  height: 12vh;
+}
+section {
+  height: 78vh;
+}
+.alert {
+  width: 50%;
 }

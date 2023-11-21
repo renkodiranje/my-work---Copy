@@ -30,3 +30,20 @@ if (timer == 0) {
   }, 3000);
 }
 timer = 0;
+window.onscroll = function () {
+  myFunction();
+};
+
+function myFunction() {
+  if (
+    document.body.scrollTop > 350 ||
+    document.documentElement.scrollTop > 350
+  ) {
+    setTimeout(() => {
+      document.getElementById("left").style.opacity = 1;
+    }, 1000);
+    setTimeout(() => {
+      document.getElementById("right").style.animation = "aboutProject 3s";
+    });
+  }
+}

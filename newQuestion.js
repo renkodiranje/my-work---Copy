@@ -24,10 +24,10 @@ form.addEventListener("submit", function (e) {
     .then(() => {
       form.reset();
       let success = document.createElement("div");
-      success.setAttribute("class", "alert alert-success w-50 m-auto");
+      success.setAttribute("class", "alert alert-success m-auto");
       success.setAttribute("role", "alert");
       success.textContent =
-        "Thank you very much. Your question has been added to the suggestion list, after review I will add selected questions to the quiz";
+        "Thank you very much. Your question has been added to the suggestion list, after review I will add selected questions to the quiz.";
       article.append(success);
       let alert = setTimeout(() => {
         success.style.display = "none";
